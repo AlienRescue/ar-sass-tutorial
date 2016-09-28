@@ -1,3 +1,5 @@
+/* Main SCSS */
+
 @import 'color';
 @import 'typography';
 
@@ -6,10 +8,10 @@
 }
 
 body {
+    padding: 1em;
+    background:$light-gray;
     color: $red;
     font-family: $main-font;
-    padding: 1em;
-    box-sizing: border-box;
 }
 
 .header {
@@ -22,21 +24,29 @@ h1 {
 }
 
 @mixin window($color) {
-    border: 1px solid $color;
     min-height: 200px;
     min-width: 300px;
     max-width: 40%;
+    margin-top:2em;
+    color:$color;
+    background:#000;
+    border: 1px solid $color;
+
     h2 {
-        width: 100%;
-        background-color: $color;
-        color: rgba(0,0,0,.4);
-        margin: 0;
+        width:60%;
+        padding: 0.25em 0.5em;
+        margin: -1em 0 0 1em;
+        color: $color;
+        background: #000;
+        border:1px solid $color;
         font-size: 1.1em;
-        font-weight: 500;
-        padding: 0.25em;
+        font-weight: 300;
+    }
+    p{
+      margin:1em;
     }
 }
 
 .solar-system-db {
-    @include window($green);
+    @include window($orange);
 }
