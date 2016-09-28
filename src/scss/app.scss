@@ -1,16 +1,42 @@
 @import 'color';
 @import 'typography';
 
-body{
-  color:$red;
-  font-family:$main-font;
-  padding:1em;
+* {
+    box-sizing: border-box;
 }
 
-@mixin header{
-  color:$orange;
+body {
+    color: $red;
+    font-family: $main-font;
+    padding: 1em;
+    box-sizing: border-box;
 }
 
-h1{
-  @include header;
+.header {
+    color: $orange;
+    font-weight: 100;
+}
+
+h1 {
+    @extend .header;
+}
+
+@mixin window($color) {
+    border: 1px solid $color;
+    min-height: 200px;
+    min-width: 300px;
+    max-width: 40%;
+    h2 {
+        width: 100%;
+        background-color: $color;
+        color: rgba(0,0,0,.4);
+        margin: 0;
+        font-size: 1.1em;
+        font-weight: 500;
+        padding: 0.25em;
+    }
+}
+
+.solar-system-db {
+    @include window($green);
 }

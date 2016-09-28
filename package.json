@@ -2,10 +2,10 @@
   "name": "ar-sass-tutorial",
   "version": "1.0.0",
   "description": "",
-  "main": "webpack.config.js",
+  "main": "src/js/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --inline --content-base dist/"
+    "start": "webpack-dev-server --inline --colors --content-base dist/"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +15,6 @@
     "node-sass": "^3.10.0",
     "normalize.css": "^4.2.0",
     "sass-loader": "^4.0.2",
-    "style-loader": "^0.13.1",
-    "webpack": "^1.13.2"
+    "style-loader": "^0.13.1"
   }
 }
