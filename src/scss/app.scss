@@ -1,0 +1,16 @@
+@import 'color';
+@import 'typography';
+
+body{
+  color:$red;
+  font-family:$main-font;
+  padding:1em;
+}
+
+@mixin header{
+  color:$orange;
+}
+
+h1{
+  @include header;
+}
