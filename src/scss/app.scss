@@ -23,11 +23,15 @@ h1 {
     @extend .header;
 }
 
+@mixin perspective{
+  transform:perspective(50em) rotateX(45deg);
+}
+
 @mixin window($color) {
     min-height: 200px;
     min-width: 300px;
     max-width: 40%;
-    margin-top:2em;
+    margin:2em;
     color:$color;
     background:#000;
     border: 1px solid $color;
